@@ -89,8 +89,11 @@ function HelpMenu_Callback(hObject, eventdata, handles)
 
 % --- Executes on button press in SubmitTimeSeriesButton.
 function SubmitTimeSeriesButton_Callback(hObject, eventdata, handles)
+    handles    
     filename = uigetfile
-    set(handles.text2, 'String', strcat('Uploaded data file: ', filename))
+    set(handles.text2, 'String', ['Uploaded data file: ' filename])
+    set(handles.text5, 'Visible', 'on')
+    
 % hObject    handle to SubmitTimeSeriesButton (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
